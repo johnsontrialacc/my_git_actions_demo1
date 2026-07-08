@@ -6,7 +6,6 @@ on:
       - main
       - feature/*
 
-
 jobs:
   hello:
     runs-on: ubuntu-latest
@@ -15,6 +14,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Building docker image
+      - name: Build Docker image
         run: docker build -t my-nginx-image .
-        
+        working-directory: .
